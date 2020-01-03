@@ -39,7 +39,7 @@ class UwWsManager extends AbstractManager
      *
      * @return \UwPsych\UwWebservices\Client
      */
-    protected function createConnection(array $config): UwWs
+    protected function createConnection(array $config): Client
     {
         /** @var string[] $config */
         return $this->factory->make($config);

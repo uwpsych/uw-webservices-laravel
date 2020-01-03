@@ -15,7 +15,7 @@ class UwWsFactory
      *
      * @param string[] $config
      *
-     * @return \UwPsych\UwWebservices\Client;
+     * @return \UwPsych\UwWebservices\Client
      */
     public function make(array $config): Client
     {
@@ -51,7 +51,7 @@ class UwWsFactory
      *
      * @param string[] $auth
      *
-     * @return \UwPsych\UwWebservices\Client;
+     * @return \UwPsych\UwWebservices\Client
      */
     protected function getClient(array $auth): Client
     {

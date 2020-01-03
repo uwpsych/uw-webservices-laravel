@@ -106,4 +106,14 @@ class UwWsServiceProvider extends ServiceProvider
 
         $this->app->alias('uwws.connection', Client::class);
     }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return string[]
+     */
+    public function provides(): array
+    {
+        return ['uwws', 'uwws.factory', 'uwws.connection'];
+    }
 }
