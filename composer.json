@@ -1,54 +1,54 @@
 {
-    "name": "uwpsych/uw-webservices-laravel",
-    "description": "Laravel wrapper for uw-webservices-php (UW PWS API v2 PHP client)",
-    "license": "MIT",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/uwpsych/uw-webservices-php"
-        }
-    ],
-    "authors": [
-        {
-            "name": "Shawn Heide",
-            "email": "psych@uw.edu",
-            "homepage": "https://github.com/uwpsych"
-        }
-    ],
-    "homepage": "https://github.com/uwpsych/uw-webservices-laravel",
-    "keywords": [
-        "uw services",
-        "person web service",
-        "laravel"
-    ],
-    "require": {
-        "php": "^8.0",
-        "illuminate/contracts": "^9.0",
-        "illuminate/support": "^9.0",
-        "graham-campbell/manager": "^4.0",
-        "uwpsych/uw-webservices-php": "dev-main"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9.0",
-        "graham-campbell/analyzer": "^3.0",
-        "graham-campbell/testbench": "^5.2",
-        "mockery/mockery": "^1.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "UwPsych\\UwWebservices\\Laravel\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "UwPsych\\UwWebservices\\Laravel\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "UwPsych\\UwWebservices\\Laravel\\UwWsServiceProvider"
-            ]
-        }
+  "name": "uwpsych/uw-webservices-laravel",
+  "description": "Laravel wrapper for uw-webservices-php (UW PWS API v2 PHP client)",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/uwpsych/uw-webservices-php"
     }
+  ],
+  "authors": [
+    {
+      "name": "Shawn Heide",
+      "email": "psych@uw.edu",
+      "homepage": "https://github.com/uwpsych"
+    }
+  ],
+  "homepage": "https://github.com/uwpsych/uw-webservices-laravel",
+  "keywords": [
+    "uw services",
+    "person web service",
+    "laravel"
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/contracts": "^9.0|^10.0",
+    "illuminate/support": "^9.0|^10.0",
+    "graham-campbell/manager": "^5.0",
+    "uwpsych/uw-webservices-php": "dev-main"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0|^10.0",
+    "graham-campbell/analyzer": "^4.0",
+    "graham-campbell/testbench": "^6.0",
+    "mockery/mockery": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "UwPsych\\UwWebservices\\Laravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "UwPsych\\UwWebservices\\Laravel\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "UwPsych\\UwWebservices\\Laravel\\UwWsServiceProvider"
+      ]
+    }
+  }
 }
