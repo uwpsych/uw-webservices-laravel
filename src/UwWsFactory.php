@@ -35,7 +35,7 @@ class UwWsFactory
      */
     protected function getConfig(array $config): array
     {
-        $keys = ['cert', 'ssl_key'];
+        $keys = ['base_uri', 'cert', 'ssl_key'];
 
         foreach ($keys as $key) {
             if (!array_key_exists($key, $config)) {
@@ -43,18 +43,18 @@ class UwWsFactory
             }
         }
 
-        return Arr::only($config, ['cert', 'ssl_key']);
+        return Arr::only($config, $keys);
     }
 
     /**
      * Get the UW web services client.
      *
-     * @param string[] $auth
+     * @param string[] $config
      *
      * @return \UwPsych\UwWebservices\Client
      */
-    protected function getClient(array $auth): Client
+    protected function getClient(array $config): Client
     {
-        return new Client($auth['cert'], $auth['ssl_key']);
+        return new Client($config['base_uri'], $config['cert'], $config['ssl_key']);
     }
 }

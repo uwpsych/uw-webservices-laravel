@@ -14,6 +14,7 @@ class UwWsFactoryTest extends AbstractTestCase
         $factory = $this->getUwWsFactory();
 
         $return = $factory->make([
+            'base_uri' => 'base_uri',
             'cert' => '/path/to/cert',
             'ssl_key' => '/path/to/key'
         ]);

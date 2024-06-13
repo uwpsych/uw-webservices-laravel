@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace UwPsych\UwWebservices\Laravel;
 
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Lumen\Application as LumenApplication;
 use UwPsych\UwWebservices\Client;
 
 class UwWsServiceProvider extends ServiceProvider
@@ -35,11 +33,7 @@ class UwWsServiceProvider extends ServiceProvider
             throw new \UnexpectedValueException('Could not locate config');
         }
 
-        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('uwws.php')]);
-        } elseif ($this->app instanceof LumenApplication) {
-            $this->app->configure('uwws');
-        }
+        $this->publishes([$source => config_path('uwws.php')]);
 
         $this->mergeConfigFrom($source, 'uwws');
     }

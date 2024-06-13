@@ -17,11 +17,11 @@ class AnalysisTest extends TestCase
      *
      * @return string[]
      */
-    protected function getPaths()
+    protected static function getPaths(): array
     {
         return [
-            realpath(__DIR__.'/../config'),
-            realpath(__DIR__.'/../src'),
+            realpath(__DIR__ . '/../config'),
+            realpath(__DIR__ . '/../src'),
             realpath(__DIR__),
         ];
     }
@@ -31,7 +31,7 @@ class AnalysisTest extends TestCase
      *
      * @return string[]
      */
-    protected function getIgnored()
+    protected static function getIgnored(): array
     {
         return [Application::class];
     }

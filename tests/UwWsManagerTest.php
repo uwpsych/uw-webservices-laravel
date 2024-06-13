@@ -16,7 +16,7 @@ use UwPsych\UwWebservices\Client;
  */
 class UwWsManagerTest extends AbstractTestBenchTestCase
 {
-    public function testCreateConnection()
+    public function testCreateConnection(): void
     {
         $config = ['path' => __DIR__];
 
@@ -34,7 +34,7 @@ class UwWsManagerTest extends AbstractTestBenchTestCase
         $this->assertArrayHasKey('uwws', $manager->getConnections());
     }
 
-    protected function getManager(array $config)
+    protected static function getManager(array $config): UwWsManager
     {
         $repository = Mockery::mock(Repository::class);
         $factory = Mockery::mock(UwWsFactory::class);

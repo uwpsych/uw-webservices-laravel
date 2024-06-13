@@ -29,11 +29,13 @@ return [
 
     'connections' => [
         'main' => [
+            'base_uri' => env('UW_BASE_URI', ''),
             'cert' => env('UW_CERT_FILE', '/path/to/cert.pem'),
             'ssl_key' => env('UW_KEY_FILE', '/path/to/cert.key')
         ],
 
         'alternative' => [
+            'base_uri' => env('UW_ALT_BASE_URI', ''),
             'cert' => env('UW_ALT_CERT_FILE', '/alt/path/to/cert.pem'),
             'ssl_key' => env('UW_ALT_KEY_FILE', '/alt/path/to/cert.key')
         ]
