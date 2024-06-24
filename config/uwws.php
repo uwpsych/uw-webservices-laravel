@@ -29,7 +29,7 @@ return [
 
     'connections' => [
         'main' => [
-            'base_uri' => env('UW_BASE_URI', 'https://ws.admin.washington.edu/identity'),
+            'base_uri' => env('UW_BASE_URI', 'https://ws.admin.washington.edu'),
             'cert' => env('UW_CERT_FILE', '/path/to/cert.pem'),
             'ssl_key' => env('UW_KEY_FILE', '/path/to/cert.key')
         ],
